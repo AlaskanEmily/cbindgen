@@ -36,7 +36,7 @@ macro_rules! deserialize_enum_str {
     };
 }
 
-mod bindings;
+pub mod bindings;
 mod bitflags;
 mod builder;
 mod cargo;
@@ -45,7 +45,7 @@ mod config;
 mod declarationtyperesolver;
 mod dependencies;
 mod error;
-mod ir;
+pub mod ir;
 mod library;
 mod mangle;
 mod monomorph;
