@@ -21,12 +21,12 @@ pub struct Bindings {
     pub config: Config,
     /// The map from path to struct, used to lookup whether a given type is a
     /// transparent struct. This is needed to generate code for constants.
-    struct_map: ItemMap<Struct>,
+    pub struct_map: ItemMap<Struct>,
     struct_fileds_memo: RefCell<HashMap<BindgenPath, Rc<Vec<String>>>>,
-    globals: Vec<Static>,
-    constants: Vec<Constant>,
-    items: Vec<ItemContainer>,
-    functions: Vec<Function>,
+    pub globals: Vec<Static>,
+    pub constants: Vec<Constant>,
+    pub items: Vec<ItemContainer>,
+    pub functions: Vec<Function>,
 }
 
 #[derive(PartialEq)]
